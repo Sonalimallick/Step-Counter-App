@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/amaranth</item>
+        <item>@font/andika</item>
+        <item>@font/andika_new_basic</item>
+        <item>@font/architects_daughter</item>
+        <item>@font/autour_one</item>
+        <item>@font/comic_neue</item>
+    </array>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="background">#FBF3E1</color>
+    <color name="tv_steps_Taken">#054695</color>
+    <color name="tv_total_Max">#056395</color>
+    <color name="appnamedisp">#0682C5</color>
+    <color name="calorie">#FFFFFF</color>
+    <color name="meter">#FFFFFF</color>
+    <color name="calorie_textcolor">#DD5106</color>
+    <color name="sub_text">#0C1AA6</color>
+    <color name="meter_text">#20AC07</color>
+    <color name="progressbar">#8EF3FB</color>
+    <color name="pss">#058CB5</color>
+    <color name="pce">#0682C5</color>
+    <color name="switchtext">#041587</color>
+    <color name="speed_bg">#FFFFFF</color>
+    <color name="speed_text">#FF0584C8</color>
+
+
+
+
+</resources>

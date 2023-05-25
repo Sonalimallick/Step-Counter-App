@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/progg"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:foreground="#83FB8F"
+        android:foregroundGravity="center"
+        app:cpb_background_progressbar_color="@color/progressbar"
+        app:cpb_background_progressbar_width="8dp"
+        app:cpb_progressbar_color_end="@color/pce"
+        app:cpb_progressbar_color_start="@color/pss"
+        app:cpb_round_border="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.246" />
+
+    <TextView
+        android:id="@+id/tv_stepsTaken"
+        android:layout_width="146dp"
+        android:layout_height="69dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/tv_steps_Taken"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.267" />
+
+    <TextView
+        android:id="@+id/tv_totalMax"
+        android:layout_width="123dp"
+        android:layout_height="64dp"
+        android:gravity="center"
+        android:textColor="@color/tv_total_Max"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="384dp"
+        android:layout_height="47dp"
+
+        android:gravity="center"
+        android:text="Power consumption : "
+        android:textColor="#0682C5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="230dp"
+        android:layout_height="54dp"
+        app:cardCornerRadius="900dp"
+        app:cardElevation="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progg"
+        app:layout_constraintVertical_bias="0.703">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottiesspeed"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:elevation="18dp"
+            android:paddingLeft="27dp"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/speed" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/speed_bg">
+
+            <TextView
+                android:id="@+id/speed_textView"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="85dp"
+                android:elevation="18dp"
+                android:fontFamily="@font/andika"
+                android:gravity="center"
+                android:paddingTop="4dp"
+                android:textColor="@color/speed_text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.444"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="331dp"
+        android:layout_height="136dp"
+        app:cardCornerRadius="11dp"
+        app:cardElevation="9dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.685">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottiesburn"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:elevation="18dp"
+            android:paddingLeft="27dp"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/burn" />
+
+
+        <LinearLayout
+            android:layout_width="308dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/calorie"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/TV_CALORIES"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="65dp"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text=" 0 calories"
+                android:textColor="@color/calorie_textcolor"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="3dp"
+                android:text="Total Calories Burnt"
+                android:textColor="@color/sub_text"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="331dp"
+        android:layout_height="133dp"
+        app:cardCornerRadius="11dp"
+        app:cardElevation="9dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.894">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieswalk"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:elevation="18dp"
+            android:paddingLeft="27dp"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/dist" />
+
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="105dp"
+            android:background="@color/meter"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/TV_DISTANCE"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="85dp"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="0.0 metre"
+                android:textColor="@color/meter_text"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="102dp"
+                android:layout_marginTop="10dp"
+                android:text="Total Distance Covered"
+                android:textColor="@color/sub_text" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieeee"
+        android:layout_width="87dp"
+        android:layout_height="75dp"
+        android:layout_centerInParent="true"
+        android:elevation="18dp"
+        android:paddingLeft="27dp"
+        app:layout_constraintBottom_toTopOf="@+id/progg"
+        app:layout_constraintEnd_toStartOf="@+id/appnamedisp"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.513"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/walking_animation" />
+
+    <TextView
+        android:id="@+id/appnamedisp"
+        android:layout_width="242dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/comic_neue"
+        android:paddingLeft="14dp"
+        android:text="STEP COUNTER"
+        android:textColor="@color/appnamedisp"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/progg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.509" />
+
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="126dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Dark Mode"
+        android:fontFamily="@font/andika"
+        android:textColor="@color/switchtext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.943"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

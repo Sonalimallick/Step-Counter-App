@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background">#010C2C</color>
+    <color name="tv_steps_Taken">#C9DFFA</color>
+    <color name="tv_total_Max">#58C3FC</color>
+    <color name="appnamedisp">#74D8FF</color>
+    <color name="calorie">#4A011B</color>
+    <color name="meter">#012B06</color>
+    <color name="calorie_textcolor">#FFDA6D</color>
+    <color name="sub_text">#0BD5DD</color>
+    <color name="meter_text">#96FF83</color>
+    <color name="progressbar">#0045F3</color>
+    <color name="pss">#49FB67</color>
+    <color name="pce">#7DFF66</color>
+    <color name="speed_bg">#000000</color>
+    <color name="switchtext">#F2F3FA</color>
+    <color name="speed_text">#57BFF7</color>
+
+</resources>
