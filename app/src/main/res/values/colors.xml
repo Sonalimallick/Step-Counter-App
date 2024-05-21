@@ -5,7 +5,7 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
+    <color name="card">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
     <color name="background">#FBF3E1</color>
@@ -23,7 +23,9 @@
     <color name="switchtext">#041587</color>
     <color name="speed_bg">#FFFFFF</color>
     <color name="speed_text">#FF0584C8</color>
-
+    <color name="greet">#0433DD</color>
+    <color name="degree">#FFFFFF</color>
+    <color name="degtext">#026518</color>
 
 
 

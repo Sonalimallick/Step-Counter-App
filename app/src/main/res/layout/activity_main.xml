@@ -7,10 +7,24 @@
     android:background="@color/background"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/compassimage"
+        android:layout_width="311dp"
+        android:layout_height="229dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginBottom="4dp"
+        android:foregroundGravity="top"
+        android:src="@drawable/campus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <com.mikhaellopez.circularprogressbar.CircularProgressBar
         android:id="@+id/progg"
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:tooltipText="Traking progress of your walk"
         android:foreground="#83FB8F"
         android:foregroundGravity="center"
         app:cpb_background_progressbar_color="@color/progressbar"
@@ -23,7 +37,8 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.246" />
+        app:layout_constraintVertical_bias="0.308" />
+
 
     <TextView
         android:id="@+id/tv_stepsTaken"
@@ -38,48 +53,114 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.267" />
+        app:layout_constraintVertical_bias="0.323" />
 
     <TextView
         android:id="@+id/tv_totalMax"
         android:layout_width="123dp"
         android:layout_height="64dp"
+        android:layout_marginLeft="18dp"
         android:gravity="center"
+        android:hapticFeedbackEnabled="true"
         android:textColor="@color/tv_total_Max"
         android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35" />
+        app:layout_constraintVertical_bias="0.406" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="384dp"
-        android:layout_height="47dp"
-
+        android:id="@+id/locationdisp"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comic_neue"
         android:gravity="center"
-        android:text="Power consumption : "
-        android:textColor="#0682C5"
+        android:padding="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Loading your current location... "
+        android:textColor="@color/tv_steps_Taken"
+        android:textSize="19dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
-
+        app:layout_constraintVertical_bias="0.573" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="230dp"
-        android:layout_height="54dp"
+        android:id="@+id/cardView4"
+        android:layout_width="100dp"
+        android:layout_height="49dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="-300dp"
+        android:layout_marginLeft="230dp"
         app:cardCornerRadius="900dp"
-        app:cardElevation="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        app:cardElevation="9dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progg"
-        app:layout_constraintVertical_bias="0.703">
+        app:cardBackgroundColor="@color/degree"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+        android:id="@+id/degree"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comic_neue"
+        android:gravity="center"
+        android:padding="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/degtext"
+        android:textSize="19dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.987"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/greet"
+        android:layout_width="380dp"
+        android:layout_height="51dp"
+        android:fontFamily="@font/comic_neue"
+        android:gravity="center"
+        android:padding="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/greet"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.141">
+
+    </TextView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="200dp"
+        android:layout_height="49dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginBottom="-300dp"
+        app:cardCornerRadius="900dp"
+        app:cardElevation="9dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <com.airbnb.lottie.LottieAnimationView
@@ -94,20 +175,23 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
             app:lottie_autoPlay="true"
+            android:tooltipText="Speed of walk"
             app:lottie_rawRes="@raw/speed" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/speed_bg">
+            android:tooltipText="Speed of walk"
+            android:background="@color/degree">
 
             <TextView
                 android:id="@+id/speed_textView"
                 android:layout_width="130dp"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
-                android:layout_marginLeft="85dp"
+                android:layout_marginLeft="65dp"
                 android:elevation="18dp"
+                android:tooltipText="Speed of walk..."
                 android:fontFamily="@font/andika"
                 android:gravity="center"
                 android:paddingTop="4dp"
@@ -124,14 +208,14 @@
     </androidx.cardview.widget.CardView>
 
 
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
-        android:layout_width="331dp"
-        android:layout_height="136dp"
-        app:cardCornerRadius="11dp"
+        android:layout_width="200dp"
+        android:layout_height="49dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginBottom="-150dp"
+        app:cardCornerRadius="900dp"
         app:cardElevation="9dp"
-        app:cardUseCompatPadding="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -142,56 +226,49 @@
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/lottiesburn"
             android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_height="80dp"
             android:layout_centerInParent="true"
-            android:elevation="18dp"
-            android:paddingLeft="27dp"
+            android:elevation="1dp"
+            android:paddingLeft="17dp"
+            android:paddingBottom="23dp"
             app:layout_constraintHorizontal_bias="0.444"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
             app:lottie_autoPlay="true"
-            app:lottie_rawRes="@raw/burn" />
+            app:lottie_rawRes="@raw/calorie" />
 
 
         <LinearLayout
-            android:layout_width="308dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:background="@color/calorie"
+            android:background="@color/degree"
             android:orientation="vertical"
-            android:padding="15dp">
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/TV_CALORIES"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="65dp"
-                android:drawablePadding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="45dp"
                 android:gravity="center"
-                android:text=" 0 calories"
+                android:tooltipText="Calories burnt"
+                android:text="Calories burnt"
                 android:textColor="@color/calorie_textcolor"
-                android:textSize="25dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="3dp"
-                android:text="Total Calories Burnt"
-                android:textColor="@color/sub_text"
-                android:textSize="14sp" />
+                android:textSize="21dp" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="331dp"
-        android:layout_height="133dp"
-        app:cardCornerRadius="11dp"
+        android:layout_width="200dp"
+        android:layout_height="49dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginBottom="-40dp"
+        app:cardCornerRadius="900dp"
         app:cardElevation="9dp"
-        app:cardUseCompatPadding="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.462"
@@ -201,11 +278,13 @@
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/lottieswalk"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
             android:elevation="18dp"
-            android:paddingLeft="27dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="1dp"
             app:layout_constraintHorizontal_bias="0.444"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -215,49 +294,44 @@
 
 
         <LinearLayout
-            android:layout_width="320dp"
-            android:layout_height="105dp"
-            android:background="@color/meter"
+            android:layout_width="201dp"
+            android:layout_height="56dp"
+            android:background="@color/degree"
             android:orientation="vertical"
             android:padding="15dp">
 
             <TextView
                 android:id="@+id/TV_DISTANCE"
-                android:layout_width="180dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="85dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="-4dp"
                 android:drawablePadding="10dp"
                 android:gravity="center"
-                android:text="0.0 metre"
+                android:tooltipText="Distance walked"
+                android:text="Dist. walked"
                 android:textColor="@color/meter_text"
-                android:textSize="25dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="102dp"
-                android:layout_marginTop="10dp"
-                android:text="Total Distance Covered"
-                android:textColor="@color/sub_text" />
+                android:textSize="21dp" />
 
         </LinearLayout>
 
 
     </androidx.cardview.widget.CardView>
 
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieeee"
-        android:layout_width="87dp"
-        android:layout_height="75dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_centerInParent="true"
-        android:elevation="18dp"
-        android:paddingLeft="27dp"
+        android:elevation="1dp"
+        android:paddingLeft="1dp"
         app:layout_constraintBottom_toTopOf="@+id/progg"
         app:layout_constraintEnd_toStartOf="@+id/appnamedisp"
-        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.513"
+        app:layout_constraintVertical_bias="0.14"
         app:lottie_autoPlay="true"
         app:lottie_rawRes="@raw/walking_animation" />
 
@@ -265,7 +339,7 @@
         android:id="@+id/appnamedisp"
         android:layout_width="242dp"
         android:layout_height="37dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/comic_neue"
         android:paddingLeft="14dp"
         android:text="STEP COUNTER"
@@ -274,24 +348,27 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/progg"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.509" />
-
+        app:layout_constraintVertical_bias="0.117" />
 
     <Switch
         android:id="@+id/switch1"
-        android:layout_width="126dp"
+        android:layout_width="83dp"
         android:layout_height="20dp"
-        android:layout_marginTop="10dp"
-        android:text="Dark Mode"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="12dp"
         android:fontFamily="@font/andika"
+        android:paddingLeft="5dp"
+        android:text="Dark"
         android:textColor="@color/switchtext"
+        app:layout_constraintBottom_toTopOf="@+id/progg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.943"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toEndOf="@+id/appnamedisp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

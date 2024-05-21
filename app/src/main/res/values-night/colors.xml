@@ -16,5 +16,7 @@
     <color name="speed_bg">#000000</color>
     <color name="switchtext">#F2F3FA</color>
     <color name="speed_text">#57BFF7</color>
-
+    <color name="greet">#24C364</color>
+    <color name="degree">#000000</color>
+    <color name="degtext">#32E683</color>
 </resources>

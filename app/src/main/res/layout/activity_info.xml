@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Info"
+    android:background="@drawable/wallpaper">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieeee"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="16dp"
+        android:elevation="1dp"
+        android:paddingLeft="1dp"
+        app:layout_constraintEnd_toStartOf="@+id/appnamedisp"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/walking_animation" />
+
+    <TextView
+        android:id="@+id/appnamedisp"
+        android:layout_width="242dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/comic_neue"
+        android:paddingLeft="14dp"
+        android:text="STEP COUNTER"
+        android:textColor="#F8ECDD"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.591"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="380dp"
+        android:layout_height="42dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="30dp"
+        app:cardBackgroundColor="@color/degree"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="9dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.16">
+
+    <TextView
+        android:id="@+id/degree"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/comic_neue"
+        android:gravity="center"
+        android:paddingTop="3dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="1dp"
+        android:text="About Step Counter"
+        android:textColor="@color/speed_text"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.987"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="380dp"
+        android:layout_height="430dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="9dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardBackgroundColor="@color/degree"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="380dp"
+            android:layout_height="430dp"
+            android:fontFamily="@font/comic_neue"
+            android:gravity="center"
+            android:padding="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="8dp"
+            android:text="Last Updated : 14.08.2023\n\nStep Counter is comitted to protecting the privacy and security of your personal information.\n\n
+We may collect your Location Information for calculation of your walking speed and providing the address where you are. We access the magnetometer and accelerometer sensor data for calculating the number of steps as well as your direction of movement.The app is completely free of adds.
+The data that we collect is not shared to any third-party service providers.\n\n
+Unique Features : Step counts, Long press of step count value to reset steps, Long press of steps Goal to increase Goal,Dark Mode support, Calculation of calories burnt, distance walked along with compass direction and Adress for better and smooth User Experience.\n\n
+For any suggestions or requests, please contact at : oishik1907@gmail.com"
+            android:textColor="@color/speed_text"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.987"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.666" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView7"
+        android:layout_width="190dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="1dp"
+        app:cardBackgroundColor="@color/degree"
+        app:cardCornerRadius="19dp"
+        app:cardElevation="9dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.949">
+
+        <TextView
+            android:layout_width="190dp"
+            android:id="@+id/tybutton"
+            android:layout_height="70dp"
+            android:fontFamily="@font/comic_neue"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="1dp"
+            android:text="T H A N K   Y O U"
+            android:textColor="@color/speed_text"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.987"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.666" />
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
